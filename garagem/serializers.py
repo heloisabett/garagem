@@ -15,7 +15,8 @@ class CategoriaSerializer(ModelSerializer):
 class CorSerializer(ModelSerializer):
     class Meta:
         model = Cor
-        fields = "__all__"        
+        fields = "__all__"   
+ 
 
 class MarcaSerializer(ModelSerializer):
     class Meta:
@@ -38,4 +39,5 @@ class VeiculoDetailSerializer(ModelSerializer):
 class VeiculoListSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
-        fields = ["id", "descricao", "preco"]
+        fields = ["id", "preco"]
+
