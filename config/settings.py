@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+AUTH_USER_MODEL = "usuario.Usuario"
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,9 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "corsheaders",
-    "rest_framework_simplejwt",
-    'rest_framework',
-    'garagem',
+    "usuario",
+    "garagem",
 ]
 
 MIDDLEWARE = [
