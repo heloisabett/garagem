@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, SlugRelatedField
 from garagem.models import Veiculo
 
 class VeiculoSerializer(ModelSerializer):

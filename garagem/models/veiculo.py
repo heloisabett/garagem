@@ -1,5 +1,5 @@
 from django.db import models
-
+from uploader.models import Image
 from garagem.models import Cor, Categoria, Marca
 
 class Veiculo(models.Model):
@@ -17,3 +17,12 @@ class Veiculo(models.Model):
 
     def __str__(self):
         return f"{self.marca} {self.categoria} {self.ano} {self.cor}" 
+        
+    capa = models.ForeignKey(
+        Image,
+        related_name="+",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        default=None,
+    )
